@@ -1,26 +1,17 @@
-let distances = [];
-let maxDistance;
-let spacer;
 
 function setup() {
-  createCanvas(2500, 2500);
+  createCanvas(2500, 2500,P2D);
+  pixelDensity(1);
   noStroke();
   colorMode(HSB,360,100,100,100);
 	rectMode(CENTER);
-  maxDistance = dist(width/2, height/2, 0, 0);
-  for (let x = 0; x < width; x++) {
-    distances[x] = []; // create nested array
-    for (let y = 0; y < height; y++) {
-      let distance = dist(width, height, 0, 0)*255;
-      distances[x][y] = (distance / maxDistance) ;
-    }
-  }
+
   spacer = 150;
   noLoop(); // Run once and stop
 }
 
 function draw() {
-      background(random(200,360),100,100,60);
+      background(255);
 
   // This embedded loop skips over values in the arrays based on
   // the spacer variable, so there are more values in the array
@@ -30,12 +21,9 @@ function draw() {
 
   for (let x = 0; x < width; x += spacer) {
     for (let y = 0; y < height; y += spacer) {
-      fill(random(200,360),100,100,60);
+      fill(random(200,360),100,100,random(60));
       rect(x + spacer / 2, y + spacer / 2,50,350);
       rect(x + spacer / 2, y + spacer / 2,350,50);
     }
   }
 }
-
-
-/* https://p5codeschool.net/tutorial/chapter3/ */

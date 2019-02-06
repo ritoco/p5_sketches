@@ -1,21 +1,10 @@
 /* １から不透明度を加えた */
 
-let distances = [];
-let maxDistance;
-let spacer;
-
 function setup() {
-  createCanvas(2500, 2500);
+  createCanvas(2500, 2500,P2D);
+  pixelDensity(1);
   noStroke();
   colorMode(HSB,360,100,100,100);
-  maxDistance = dist(width/2, height/2, 0, 0);
-  for (let x = 0; x < width; x++) {
-    distances[x] = []; // create nested array
-    for (let y = 0; y < height; y++) {
-      let distance = dist(width, height, 0, 0)*255;
-      distances[x][y] = (distance / maxDistance) ;
-    }
-  }
   spacer = 50;
   noLoop(); // Run once and stop
 }
@@ -31,12 +20,9 @@ function draw() {
 
   for (let x = 0; x < width; x += spacer) {
     for (let y = 0; y < height; y += spacer) {
-      fill(random(0,70),distances[x][y],distances[x][y],15);
+      fill(random(0,70),100,100,15);
       ellipse(x + spacer / 2, y + spacer / 2,150,150);
 
     }
   }
 }
-
-
-/* 助けてくれてありがとう → https://p5codeschool.net/tutorial/chapter3/ */

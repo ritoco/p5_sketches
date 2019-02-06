@@ -3,17 +3,10 @@ let maxDistance;
 let spacer;
 
 function setup() {
-  createCanvas(2500, 2500);
+  createCanvas(2500, 2500,P2D);
+  pixelDensity(1);
   noStroke();
   colorMode(HSB,360,100,100,100);
-  maxDistance = dist(width/2, height/2, 0, 0);
-  for (let x = 0; x < width; x++) {
-    distances[x] = []; // create nested array
-    for (let y = 0; y < height; y++) {
-      let distance = dist(width, height, 0, 0)*255;
-      distances[x][y] = (distance / maxDistance) ;
-    }
-  }
   spacer = 150;
   noLoop(); // Run once and stop
 }
@@ -35,6 +28,3 @@ function draw() {
     }
   }
 }
-
-
-/* https://p5codeschool.net/tutorial/chapter3/ */
