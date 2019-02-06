@@ -6,16 +6,15 @@ function setup() {
   colorMode(HSB,360,100,100,100);
 	rectMode(CENTER);
 
-  lining_up = random(150); //ここを変えた！四角の敷き詰め方がランダム。
-  noLoop(); // Run once and stop
+  spacer = 150;
+  noLoop();
 }
 
 function draw() {
-      background(255);
-
+  background(255);
   for (let x = 0; x < width; x += spacer) {
     for (let y = 0; y < height; y += spacer) {
-      fill(random(100,130),100,random(100),random(1,20));
+      fill(random(200,360),100,100,random(60));
       rect(x + spacer / 2, y + spacer / 2,50,350);
       rect(x + spacer / 2, y + spacer / 2,350,50);
     }
