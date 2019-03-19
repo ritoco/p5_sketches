@@ -1,10 +1,10 @@
-
+var spacer;
 function setup() {
-  createCanvas(500, 500,P2D);
+  createCanvas(2500, 2500,P2D);
   pixelDensity(1);
   noStroke();
   colorMode(HSB,360,100,100,100);
-  rectMode(CENTER);
+	rectMode(CENTER);
 
   spacer = random(150); //四角の敷き詰め方がランダムなのでいろんなパターンできる。
   noLoop();
