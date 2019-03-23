@@ -28,9 +28,9 @@ function draw() {
 			strokeWeight(random(9));
 			stroke(random(10,80), 100 ,random(100),60);
 			fill(random(10,80), 100 ,random(100),5);
-			translate(100,-210);
+			translate(190,-210);
 			rectMode(CENTER);
-			rotate(20);
+			rotate(120);
       rect(x + spacer, y + spacer,30,30);
 			pop();
     }
