@@ -16,7 +16,7 @@ function setup(){
    for (var tate = 1; tate < height; tate += 30) {
      for (var yoko = 1; yoko < width; yoko += 30) {
 
-       // noiseを作成。なんでyokoをかけたのかはわからない。
+       //ノイズを作る。なんでyokoをかけたのかはわからない。
        var my_noise = noise( sin(noiseRange) + yoko * noiseRange );
 
        stroke( random(1,80),100,100 );
