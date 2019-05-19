@@ -21,7 +21,7 @@
 <br />
 <br />
 ## 関連リンク
-NEORT<br />
+【 NEORT 】<br />
 https://neort.io/jKsRDi95zSW02wdvcLpWHZEE58p2
 <br />
 NEORTでも作品投稿とコード公開をしています。
